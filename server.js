@@ -78,6 +78,11 @@ app.get('/api/:alienName', (request, response) => {
 
 })
 
+app.get('/api/', (request, response) => {
+    response.json(aliens)
+})
+
+
 app.listen(process.env.PORT || PORT, () => {
     console.log(`server is running on ${PORT}`)
 })
